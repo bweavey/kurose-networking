@@ -1,0 +1,59 @@
+Chapter 1 Review Questions
+
+R1. A host is another name for an end system, which are the systems at the end of a network (i.e. edge of the Internet) and that host applications. End systems include PCs, servers, mobile devices, and "things".
+
+R2. Wikipedia says that a "protocol is a rule which describes how an activity should be performed, especially in the field of diplomacy."
+
+R3. Standards often define the protocols used when interoperating systems.
+
+R4. The different access technologies include DSL, Cable, FTTH, and 5G for the home, Ethernet and WiFi for enterprise, and cellular for wide-area.
+
+R5. Hybrid fiber coax (HFC) refers to the system providing cable Internet access to the home (due to routing fiber between a cable modem termination system (CMTS) and fiber nodes and using cables between the nodes and each home). Since every packet sent from the CMTS travels on every link to every home, the downstream transmission rate is shared among users and collisions are not possible. 
+
+R6. Access technologies in my area include DSL, cable, and fiber. Speeds and price are hard to interpret without more effort than I care to spend.
+
+R7. Ethernet LAN transmission rates range from 10 to 10,000 Mbps to the switch.
+
+R8. Ethernet can run over different physical media: twisted pair copper wire, coaxial cable, fiber, etc.
+
+HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is shared or dedicated.
+
+R9. HFC supports up to 1.2 Gbps downstream and 100 Mbps upstream shared among users. DSL supports up to 52 Mbps downstream and 16 Mbps upstream (newest standard provides up to 1 Gbps down and up combined) dedicated to each user. FTTH can offer multiple Gbps with rates being dedicated or shared depending on the network architecture.
+
+R10. The most popular wireless access technologies are cellular and WiFi. Cellular allows much farther distances to a base station: 10s of km vs 10s of m for WiFi.
+
+R11. Store-and-forward means an entire packet must be received before transmitting further. The switch receives the complete packet at L/R1 seconds, and then forwards it on which takes L/R2 seconds to reach the destination. The total time is then L(1/R1 + 1/R2) seconds.
+
+R12. Circuit-switched networks refer to reserved resources for transmission, i.e. a connection is established. Advantages include not having to packet queue so rates are guaranteed. TDM advantages are not discussed in this section.
+
+R13. A 2 Mbps link can support two users simultaneously requiring 1 Mbps. With more than 2 users in packet switching the packets start forming a queue. The probability that a given user is transmitting is 0.2. If there are three users, all three are transmitting simultaneously with probability of 0.008, meaning the queue grows 2/25 of the time.
+
+R14. Two ISPs at the same tier will peer (i.e. connect to each other) to allow traffic between them to avoid going through providers at a higher level, as they are charged on the amount of traffic they exchange with providers. Peering can take place at an Internet Exchange Point (IXP, a building with its own switches) provided by a third-party. Book doesn't mention business model of IXP, but I assume they charge ISPs for having a presence at the IXP.
+
+R15. Content-provider networks such as Google's aim to reduce payments to tier-1 providers by establishing a network to privately route internal traffic and publicly peer with ISPs as much as possible.
+
+R16. The delays a packet encounters are nodal processing (us, constant), queuing (us-ms, variable), transmision (us-ms, constant), and propagation (us-ms, constant). Other delays include protocol-induced and application delays.
+
+R17. For 100 byte packets and 10km link, 100 Mbps transmission rate allows sender to transmit entire packet before first bit reaches receiver. Any slower transmission has packet head reaching receiver before sender is finished transmitting. 
+
+R18. A bit travels 2500km at 2.5e8 m/s in 10 us. A packet of 1000 bytes transmitted at 2 Mbps reaches a receiver 2500km away (neglecting propagation) in 0.001 Mb / 2 Mbps = 0.5 ms. Total time is then 510 us. More generally, a packet of length L transmitted at rate R over distance d with propagation speed s takes L/R + d/s time to reach destination and thus depends on packet length and transmission rate.
+
+R19. The throughput of a path from A to B is the bottleneck link rate, so 500 kbps. For a file of 4Mb, it would take 4Mb/0.5Mbps=8s to transfer. If the bottleneck was 100 kbps, it would take 40s.
+
+R20. End system A will segment the file into packets, append destination address, and send them onto the network. When a packet arrives at a router, it reads its header to forward it on correct link. This process repeats until packet repeats final destination, analgously to stopping at rest stops and asking for directions.
+
+R21. The max emission rate is 500 packet/s, and minimum transimission rate is 350 packet/s. This represents a traffic intensity of 500/350 = 1.4. Packet loss starts in two runs at 8.7ms and 9.7ms, with different values due to random nature of packet arrival.
+
+R22. A layer can perform delivery of messages, detection/retransmission, error recovery, translation of addresses, congestion control, etc. Some functions are duplicated across layers.
+
+R23. The five layers and their purpose in the Internet protocol stack are Application (information exchange with remote applications), Transport (transports application messages), Network (moving network packets) , Link (moves packets to next node), and Physical (transmits bits to next node).
+
+R24. An application-layer message is the packet of information an application wishes to exchange with another application. A transport-layer segment is a portion of an application message with additional info needed in transport-layer. A network-layer datagram is a transport segment with additional fields needed in the network layer. A link-layer frame is a networtk datagram with additional transport layer fields.
+
+R25. A router processes the physical, link, and network layers. A link-layer switch processes the physical and link layers. A host processes every layer. 
+
+R26. Self-replicating malware is malware that seeks entry to other hosts for infection.
+
+R27. A botnet can be created and used for DDoS attacks by infecting hosts to create a zombie network that, when ordered by an attacker, start blasting traffic at a target to clog the server.
+
+R28. As a man in the middle, Trudy could capture packets transmitted and spoof packets.
