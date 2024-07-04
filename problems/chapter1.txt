@@ -16,8 +16,6 @@ R7. Ethernet LAN transmission rates range from 10 to 10,000 Mbps to the switch.
 
 R8. Ethernet can run over different physical media: twisted pair copper wire, coaxial cable, fiber, etc.
 
-HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is shared or dedicated.
-
 R9. HFC supports up to 1.2 Gbps downstream and 100 Mbps upstream shared among users. DSL supports up to 52 Mbps downstream and 16 Mbps upstream (newest standard provides up to 1 Gbps down and up combined) dedicated to each user. FTTH can offer multiple Gbps with rates being dedicated or shared depending on the network architecture.
 
 R10. The most popular wireless access technologies are cellular and WiFi. Cellular allows much farther distances to a base station: 10s of km vs 10s of m for WiFi.
